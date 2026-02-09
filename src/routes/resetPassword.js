@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
       { expiresIn: "15m" }
     );
 
-    const resetLink = `http://localhost:4000/api/reset-password/${token}`;
+    const resetLink = `http://localhost:3000/reset-password/${token}`;
 
     await transporter.sendMail({
       from:process.env.EMAIL_USER,
